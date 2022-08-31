@@ -4,7 +4,6 @@ import (
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
-	"errors"
 	"web_app/models"
 )
 
@@ -13,12 +12,6 @@ const salt = "nnkpassword"
 //把每一步数据库操作封装成函数
 
 //等待logic层根据业务需要调用
-
-var (
-	ErrorUserExist     = errors.New("用户已存在")
-	ErrorUserNotExist  = errors.New("无此用户")
-	ErrorWrongPassword = errors.New("用户名或密码错误")
-)
 
 func CheckUserExist(username string) (err error) {
 	sqlStr := "select count(user_id) from user where username = ?"
