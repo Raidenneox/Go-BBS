@@ -12,7 +12,7 @@ import "github.com/gin-gonic/gin"
 type ResponseData struct {
 	Code ResCode `json:"code"`
 	Msg  any     `json:"msg"`
-	Data any     `json:"data"`
+	Data any     `json:"data,omitempty"`
 }
 
 func ResponseSuccess(c *gin.Context, data any) {
