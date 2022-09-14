@@ -120,3 +120,64 @@
 {"level":"INFO","time":"2022-09-14T11:34:07.443+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0}
 {"level":"INFO","time":"2022-09-14T14:15:33.001+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-09-14T14:15:33.005+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T19:46:43.529+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"INFO","time":"2022-09-14T19:47:21.761+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0}
+{"level":"ERROR","time":"2022-09-14T19:47:55.522+0800","caller":"controller/user.go:58","msg":"SignIn with invalid param","error":"Key: 'ParamLogin.username' Error:Field validation for 'username' failed on the 'required' tag\nKey: 'ParamLogin.password' Error:Field validation for 'password' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-09-14T19:47:55.523+0800","caller":"logger/logger.go:83","msg":"/v1/api/login","status":200,"method":"POST","path":"/v1/api/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0013781}
+{"level":"INFO","time":"2022-09-14T19:48:25.261+0800","caller":"logger/logger.go:83","msg":"/v1/api/login","status":200,"method":"POST","path":"/v1/api/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0410207}
+{"level":"ERROR","time":"2022-09-14T19:48:42.638+0800","caller":"controller/vote.go:35","msg":"logic.VoteForPost()failed","error":"投票时间已过"}
+{"level":"INFO","time":"2022-09-14T19:48:42.638+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0147019}
+{"level":"ERROR","time":"2022-09-14T19:48:44.666+0800","caller":"controller/vote.go:35","msg":"logic.VoteForPost()failed","error":"投票时间已过"}
+{"level":"INFO","time":"2022-09-14T19:48:44.666+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0115252}
+{"level":"INFO","time":"2022-09-14T19:48:58.286+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"GET","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0}
+{"level":"INFO","time":"2022-09-14T19:49:05.417+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0}
+{"level":"ERROR","time":"2022-09-14T19:49:24.686+0800","caller":"controller/post.go:21","msg":"c.ShouldBind(p) failed","error":"Key: 'Post.community_id' Error:Field validation for 'community_id' failed on the 'required' tag\nKey: 'Post.title' Error:Field validation for 'title' failed on the 'required' tag\nKey: 'Post.content' Error:Field validation for 'content' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-09-14T19:49:24.686+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.000375}
+{"level":"ERROR","time":"2022-09-14T19:49:32.321+0800","caller":"controller/post.go:21","msg":"c.ShouldBind(p) failed","error":"Key: 'Post.community_id' Error:Field validation for 'community_id' failed on the 'required' tag\nKey: 'Post.title' Error:Field validation for 'title' failed on the 'required' tag\nKey: 'Post.content' Error:Field validation for 'content' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-09-14T19:49:32.322+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0010922}
+{"level":"INFO","time":"2022-09-14T19:50:24.421+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0572114}
+{"level":"ERROR","time":"2022-09-14T19:51:04.179+0800","caller":"controller/vote.go:35","msg":"logic.VoteForPost()failed","error":"投票时间已过"}
+{"level":"INFO","time":"2022-09-14T19:51:04.179+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0016012}
+{"level":"INFO","time":"2022-09-14T20:04:05.714+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-14T20:04:05.727+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T20:04:18.471+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"INFO","time":"2022-09-14T20:04:50.886+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.037327}
+{"level":"ERROR","time":"2022-09-14T20:05:13.902+0800","caller":"controller/vote.go:35","msg":"logic.VoteForPost()failed","error":"投票时间已过"}
+{"level":"INFO","time":"2022-09-14T20:05:13.903+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0041329}
+{"level":"INFO","time":"2022-09-14T20:10:13.395+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-14T20:10:13.400+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T20:10:24.710+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"ERROR","time":"2022-09-14T20:10:29.813+0800","caller":"controller/vote.go:35","msg":"logic.VoteForPost()failed","error":"投票时间已过"}
+{"level":"INFO","time":"2022-09-14T20:10:29.813+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.005739}
+{"level":"ERROR","time":"2022-09-14T20:10:51.779+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:10:51.779+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0241815}
+{"level":"ERROR","time":"2022-09-14T20:11:04.358+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:11:04.358+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0533764}
+{"level":"ERROR","time":"2022-09-14T20:12:03.165+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:12:03.165+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.015491}
+{"level":"INFO","time":"2022-09-14T20:13:13.356+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-14T20:13:13.375+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T20:13:25.934+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"ERROR","time":"2022-09-14T20:14:40.584+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:14:40.584+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0220097}
+{"level":"INFO","time":"2022-09-14T20:16:16.027+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-14T20:16:16.037+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T20:16:31.148+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"INFO","time":"2022-09-14T20:16:38.843+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0216811}
+{"level":"INFO","time":"2022-09-14T20:17:32.187+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-14T20:17:32.201+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T20:17:45.263+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"ERROR","time":"2022-09-14T20:17:50.878+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:17:50.878+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0149832}
+{"level":"INFO","time":"2022-09-14T20:21:49.904+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-14T20:21:49.910+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-09-14T20:21:51.581+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
+{"level":"ERROR","time":"2022-09-14T20:22:05.277+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:22:05.277+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0393049}
+{"level":"ERROR","time":"2022-09-14T20:22:09.027+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:22:09.027+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0299046}
+{"level":"INFO","time":"2022-09-14T20:22:43.765+0800","caller":"logger/logger.go:83","msg":"/v1/api/posts","status":200,"method":"GET","path":"/v1/api/posts","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0501242}
+{"level":"ERROR","time":"2022-09-14T20:23:06.767+0800","caller":"controller/vote.go:35","msg":"logic.VoteForPost()failed","error":"投票时间已过"}
+{"level":"INFO","time":"2022-09-14T20:23:06.767+0800","caller":"logger/logger.go:83","msg":"/v1/api/vote","status":200,"method":"POST","path":"/v1/api/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0016518}
+{"level":"ERROR","time":"2022-09-14T20:23:38.206+0800","caller":"controller/post.go:34","msg":"logic.CreatePost() failed","error":"WRONGTYPE Operation against a key holding the wrong kind of value"}
+{"level":"INFO","time":"2022-09-14T20:23:38.207+0800","caller":"logger/logger.go:83","msg":"/v1/api/post","status":200,"method":"POST","path":"/v1/api/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0489512}

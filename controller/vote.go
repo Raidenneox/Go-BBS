@@ -4,6 +4,8 @@ import (
 	"web_app/logic"
 	"web_app/models"
 
+	"go.uber.org/zap"
+
 	"github.com/go-playground/validator/v10"
 
 	"github.com/gin-gonic/gin"
@@ -28,6 +30,11 @@ func PostVoteHandler(c *gin.Context) {
 	if err != nil {
 		ResponseError(c, CodeNeedLogin)
 	}
-	logic.VoteForPost(userID, p)
+	err = logic.VoteForPost(userID, p)
+	if err != nil {
+		zap.L().Error("logic.VoteForPost()failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
 	ResponseSuccess(c, nil)
 }
