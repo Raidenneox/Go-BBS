@@ -10,19 +10,20 @@ import (
 	"go.uber.org/zap"
 )
 
-func CreatePost(p *models.Post) (err error) {
-	//1.生成postID
+func CreatePost(p *models.Post) error {
+	// 1. 生成post id
 	p.ID = snowflake.GenID()
-	//保存到数据库
-	err = mysql.CreatePost(p)
+	// 2. 保存到数据库
+	err := mysql.CreatePost(p)
 	if err != nil {
-		return
+		return err
 	}
-	err = redis.CreatePost(p.ID)
-	fmt.Println(1)
-	return
-
-	//3.返回
+	err2 := redis.CreatePost(p.ID)
+	if err2 != nil {
+		fmt.Println("写入redis出错")
+	}
+	return err2
+	// 3. 返回
 }
 
 // GetPostByID 根据帖子id查询帖子详情

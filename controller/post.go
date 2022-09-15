@@ -73,5 +73,26 @@ func GetPostListHandler(c *gin.Context) {
 	}
 	//返回目前的参数列表
 	ResponseSuccess(c, data)
+}
+
+// GetPostListHandler2 根据前端传来参数动态获取帖子的列表
+//按创建时间/分数排序
+
+//1.获取参数
+//2.去redis查询ID值
+//3.根据ID去数据库查询帖子详细信息
+
+func GetPostListHandler2(c *gin.Context) {
+	//GET请求参数(querystring): /api/v1/post2?p=1&s=10&o=time
+	//获取分页参数
+	page, size := GetPageInfo(c)
+
+	//查询到所有的帖子并以列表的形式返回
+	data, err := logic.GetPostList(page, size)
+	if err != nil {
+		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
+	}
+	//返回目前的参数列表
+	ResponseSuccess(c, data)
 
 }

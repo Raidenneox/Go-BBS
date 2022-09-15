@@ -29,6 +29,7 @@ func PostVoteHandler(c *gin.Context) {
 	userID, err := GetCurrentUSerID(c)
 	if err != nil {
 		ResponseError(c, CodeNeedLogin)
+		return
 	}
 	err = logic.VoteForPost(userID, p)
 	if err != nil {

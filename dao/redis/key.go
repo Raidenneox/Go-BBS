@@ -5,13 +5,13 @@ package redis
 
 //Redis key 注意使用命名空间的方式区分不同的key，方便查询和拆分
 const (
-	KeyPrefix         = "bluebell"
-	KeyPostTimeZSet   = "post:time"   //zset;帖子及发帖时间
-	KeyScorePostZSet  = "post:score"  //zset;帖子及其分数
-	KeyPostZSetPrefix = "post:voted:" //zset;记录用户及其投票类型;参数是post id
+	Prefix             = "bluebell:"
+	KeyPostTimeZSet    = "post:time"   //zset;帖子及发帖时间
+	KeyScorePostZSet   = "post:score"  //zset;帖子及其分数
+	KeyPostVotedZSetPF = "post:voted:" //zset;记录用户及其投票类型;参数是post id
 )
 
 //给redis key 加上前缀
 func getRedisKey(key string) string {
-	return KeyPrefix + key
+	return Prefix + key
 }
