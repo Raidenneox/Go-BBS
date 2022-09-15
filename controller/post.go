@@ -84,15 +84,23 @@ func GetPostListHandler(c *gin.Context) {
 
 func GetPostListHandler2(c *gin.Context) {
 	//GET请求参数(querystring): /api/v1/post2?p=1&s=10&o=time
-	//获取分页参数
-	page, size := GetPageInfo(c)
 
-	//查询到所有的帖子并以列表的形式返回
-	data, err := logic.GetPostList(page, size)
+	//初始化结构体时指定初始参数
+	p := &models.ParamPostList{
+		Page:  1,
+		Size:  10,
+		Order: models.OrderTime,
+	}
+	if err := c.ShouldBind(p); err != nil {
+		zap.L().Error("GetPostListHandler2() with invilid param", zap.Error(err))
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
+	//获取数据
+	data, err := logic.GetPostList2(p)
 	if err != nil {
 		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
 	}
 	//返回目前的参数列表
 	ResponseSuccess(c, data)
-
 }

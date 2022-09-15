@@ -1,5 +1,10 @@
 package models
 
+const (
+	OrderTime  = "time"
+	OrderScore = "score"
+)
+
 // ParamSignUp 注册请求参数
 type ParamSignUp struct {
 	Username   string `json:"username" binding:"required"`
@@ -20,5 +25,9 @@ type ParamVoteData struct {
 	Direction int8   `json:"direction,string" binding:"oneof=1 0 -1"` //帖子赞成票(1)还是反对票(-1)取消投票(0)
 }
 
+// ParamPostList 获取帖子列表的querystring 参数
 type ParamPostList struct {
+	Page  int64  `json:"page" form:"page"`
+	Size  int64  `json:"size" form:"size"`
+	Order string `json:"order" form:"order"`
 }
