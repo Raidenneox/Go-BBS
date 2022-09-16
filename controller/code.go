@@ -21,7 +21,7 @@ var CodeMsgMap = map[ResCode]string{
 	CodeUserNotExist:    "用户不存在",
 	CodeInvalidPassword: "用户名或密码错误",
 	CodeServerBusy:      "服务繁忙",
-	CodeNeedLogin:       "需要登陆",
+	CodeNeedLogin:       "需要登录",
 	CodeInvalidToken:    "无效的Token",
 }
 
