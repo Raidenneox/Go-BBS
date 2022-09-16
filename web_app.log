@@ -201,3 +201,5 @@
 {"level":"INFO","time":"2022-09-15T16:46:07.598+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}
 {"level":"DEBUG","time":"2022-09-15T16:46:18.797+0800","caller":"Bluebell/main.go:43","msg":"Logger init success"}
 {"level":"INFO","time":"2022-09-15T16:46:38.771+0800","caller":"logger/logger.go:83","msg":"/v1/api/posts2","status":200,"method":"GET","path":"/v1/api/posts2","query":"page=1&size=2&order=score","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0170884}
+{"level":"INFO","time":"2022-09-16T09:42:59.669+0800","caller":"Bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-09-16T09:42:59.675+0800","caller":"Bluebell/main.go:101","msg":"Server exiting"}

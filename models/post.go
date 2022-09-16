@@ -14,6 +14,7 @@ type Post struct {
 
 type APIPostDetail struct {
 	AuthorName       string             `json:"author_name"`
+	VoteNum          int64              `json:"vote_num"` //投票数/分数 后期可以应用其它算法来进行计算
 	*Post                               //帖子信息
 	*CommunityDetail `json:"community"` //分类信息
 }
