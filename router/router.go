@@ -1,6 +1,7 @@
 package router
 
 import (
+	"net/http"
 	"time"
 	"web_app/controller"
 	"web_app/logger"
@@ -13,11 +14,20 @@ func Setup() *gin.Engine {
 
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
-	v1 := r.Group("/v1/api")
 
-	v1.GET("/ping", func(c *gin.Context) {
+	//加载静态文件
+	r.LoadHTMLFiles("./templates/index.html")
+	r.Static("/static", "./static")
+
+	//根目录返回静态文件
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
+	r.GET("/ping", func(c *gin.Context) {
 		c.String(200, "pong")
 	})
+
+	v1 := r.Group("/api/v1")
 
 	//登陆的处理函数
 	v1.POST("/signup", controller.SignUpHandler) //注册的处理函数
